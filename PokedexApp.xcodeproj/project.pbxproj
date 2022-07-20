@@ -106,18 +106,10 @@
 		C2675813288697D100DF89C5 /* PokedexApp */ = {
 			isa = PBXGroup;
 			children = (
-				C2675814288697D100DF89C5 /* AppDelegate.h */,
-				C2675815288697D100DF89C5 /* AppDelegate.m */,
-				C2675817288697D100DF89C5 /* SceneDelegate.h */,
-				C2675818288697D100DF89C5 /* SceneDelegate.m */,
-				C267581A288697D100DF89C5 /* ViewController.h */,
-				C267581B288697D100DF89C5 /* ViewController.m */,
-				C267581D288697D100DF89C5 /* Main.storyboard */,
-				C2675823288697D400DF89C5 /* Assets.xcassets */,
-				C2675825288697D400DF89C5 /* LaunchScreen.storyboard */,
 				C2675828288697D400DF89C5 /* Info.plist */,
-				C2675829288697D400DF89C5 /* main.m */,
-				C2675820288697D100DF89C5 /* PokedexApp.xcdatamodeld */,
+				C267584D2886CF2700DF89C5 /* Delegete */,
+				C267584C2886CF0E00DF89C5 /* ViewController */,
+				C267584E2886CF4500DF89C5 /* View */,
 			);
 			path = PokedexApp;
 			sourceTree = "<group>";
@@ -137,6 +129,38 @@
 				C267583F288697D400DF89C5 /* PokedexAppUITestsLaunchTests.m */,
 			);
 			path = PokedexAppUITests;
+			sourceTree = "<group>";
+		};
+		C267584C2886CF0E00DF89C5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C267581A288697D100DF89C5 /* ViewController.h */,
+				C267581B288697D100DF89C5 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C267584D2886CF2700DF89C5 /* Delegete */ = {
+			isa = PBXGroup;
+			children = (
+				C2675814288697D100DF89C5 /* AppDelegate.h */,
+				C2675815288697D100DF89C5 /* AppDelegate.m */,
+				C2675817288697D100DF89C5 /* SceneDelegate.h */,
+				C2675818288697D100DF89C5 /* SceneDelegate.m */,
+			);
+			path = Delegete;
+			sourceTree = "<group>";
+		};
+		C267584E2886CF4500DF89C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C267581D288697D100DF89C5 /* Main.storyboard */,
+				C2675823288697D400DF89C5 /* Assets.xcassets */,
+				C2675825288697D400DF89C5 /* LaunchScreen.storyboard */,
+				C2675829288697D400DF89C5 /* main.m */,
+				C2675820288697D100DF89C5 /* PokedexApp.xcdatamodeld */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
