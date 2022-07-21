@@ -100,6 +100,9 @@
                                 <color key="tintColor" red="1" green="0.33913995009999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Pokedex"/>
+                                <connections>
+                                    <action selector="fetchPokedex:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VaW-39-HIU"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4fJ-1i-8Dv">
                                 <rect key="frame" x="93" y="94" width="228" height="99.5"/>

@@ -6,10 +6,18 @@
 //
 
 #import "ViewController.h"
+#import "Pokemon.h"
+
 
 @interface ViewController ()
 
     @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+    @property (strong, nonatomic) NSString* apiCall;
+
+    @property (strong, nonatomic) NSMutableArray* pokemon;
+
+    - (IBAction)fetchPokedex:(id)sender;
 
 @end
 
@@ -19,17 +27,54 @@
     [super viewDidLoad];
     [_tableView setDelegate: self];
     [_tableView setDataSource: self];
+    _pokemon = [[NSMutableArray alloc] init];
+    _apiCall = @"https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0";
     
 }
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return [tableView dequeueReusableCellWithIdentifier:@"pokemonCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pokemonCell"];
+    cell.textLabel.text = _pokemon[indexPath.item][@"name"];
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _pokemon.count;
+}
+
+- (void)makeAPICall {
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:_apiCall]];
+
+    [urlRequest setHTTPMethod:@"GET"];
+
+    NSURLSession *session = [NSURLSession sharedSession];
+
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+    {
+      NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+      if(httpResponse.statusCode == 200)
+      {
+          NSError *parseError = nil;
+          NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+          NSMutableArray *pokemonRaw = responseDictionary[@"results"];
+          _pokemon = pokemonRaw;
+          [self->_tableView reloadData];
+      }
+      else
+      {
+        NSLog(@"Error");
+      }
+    }];
+    [dataTask resume];
 }
 
 
+- (IBAction)fetchPokedex:(id)sender {
+    [self makeAPICall];
+}
+
 @end
+                                      
+
+                                      

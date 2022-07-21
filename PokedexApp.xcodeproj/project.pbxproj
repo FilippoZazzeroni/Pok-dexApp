@@ -18,6 +18,7 @@
 		C2675834288697D400DF89C5 /* PokedexAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2675833288697D400DF89C5 /* PokedexAppTests.m */; };
 		C267583E288697D400DF89C5 /* PokedexAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C267583D288697D400DF89C5 /* PokedexAppUITests.m */; };
 		C2675840288697D400DF89C5 /* PokedexAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C267583F288697D400DF89C5 /* PokedexAppUITestsLaunchTests.m */; };
+		C2A69760288978E600FC74E8 /* Pokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A6975F288978E600FC74E8 /* Pokemon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C2675839288697D400DF89C5 /* PokedexAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C267583D288697D400DF89C5 /* PokedexAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokedexAppUITests.m; sourceTree = "<group>"; };
 		C267583F288697D400DF89C5 /* PokedexAppUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokedexAppUITestsLaunchTests.m; sourceTree = "<group>"; };
+		C2A6975E288978B400FC74E8 /* Pokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
+		C2A6975F288978E600FC74E8 /* Pokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pokemon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 		C2675813288697D100DF89C5 /* PokedexApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2A6975D288978A500FC74E8 /* Models */,
 				C2675828288697D400DF89C5 /* Info.plist */,
 				C267584D2886CF2700DF89C5 /* Delegete */,
 				C267584C2886CF0E00DF89C5 /* ViewController */,
@@ -161,6 +165,15 @@
 				C2675820288697D100DF89C5 /* PokedexApp.xcdatamodeld */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C2A6975D288978A500FC74E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2A6975E288978B400FC74E8 /* Pokemon.h */,
+				C2A6975F288978E600FC74E8 /* Pokemon.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +309,7 @@
 				C267582A288697D400DF89C5 /* main.m in Sources */,
 				C2675822288697D100DF89C5 /* PokedexApp.xcdatamodeld in Sources */,
 				C267581C288697D100DF89C5 /* ViewController.m in Sources */,
+				C2A69760288978E600FC74E8 /* Pokemon.m in Sources */,
 				C2675816288697D100DF89C5 /* AppDelegate.m in Sources */,
 				C2675819288697D100DF89C5 /* SceneDelegate.m in Sources */,
 			);
