@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C25B9D8E288BF07300BEFD65 /* ViewController+PokemonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D8D288BF07200BEFD65 /* ViewController+PokemonViewController.m */; };
 		C2675816288697D100DF89C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2675815288697D100DF89C5 /* AppDelegate.m */; };
 		C2675819288697D100DF89C5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2675818288697D100DF89C5 /* SceneDelegate.m */; };
 		C267581C288697D100DF89C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C267581B288697D100DF89C5 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C25B9D8C288BF07200BEFD65 /* ViewController+PokemonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+PokemonViewController.h"; sourceTree = "<group>"; };
+		C25B9D8D288BF07200BEFD65 /* ViewController+PokemonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+PokemonViewController.m"; sourceTree = "<group>"; };
 		C2675811288697D100DF89C5 /* PokedexApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2675814288697D100DF89C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2675815288697D100DF89C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 			children = (
 				C267581A288697D100DF89C5 /* ViewController.h */,
 				C267581B288697D100DF89C5 /* ViewController.m */,
+				C25B9D8C288BF07200BEFD65 /* ViewController+PokemonViewController.h */,
+				C25B9D8D288BF07200BEFD65 /* ViewController+PokemonViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			files = (
 				C267582A288697D400DF89C5 /* main.m in Sources */,
 				C2675822288697D100DF89C5 /* PokedexApp.xcdatamodeld in Sources */,
+				C25B9D8E288BF07300BEFD65 /* ViewController+PokemonViewController.m in Sources */,
 				C267581C288697D100DF89C5 /* ViewController.m in Sources */,
 				C2A69760288978E600FC74E8 /* Pokemon.m in Sources */,
 				C2675816288697D100DF89C5 /* AppDelegate.m in Sources */,

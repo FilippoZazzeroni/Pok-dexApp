@@ -43,6 +43,10 @@
     return _pokemon.count;
 }
 
+- (IBAction)fetchPokedex:(id)sender {
+    [self makeAPICall];
+}
+
 - (void)makeAPICall {
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:_apiCall]];
 
@@ -58,8 +62,11 @@
           NSError *parseError = nil;
           NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
           NSMutableArray *pokemonRaw = responseDictionary[@"results"];
-          _pokemon = pokemonRaw;
-          [self->_tableView reloadData];
+          self->_pokemon = pokemonRaw;
+          dispatch_async(dispatch_get_main_queue(), ^{
+              [self->_tableView reloadData];
+          });
+          
       }
       else
       {
@@ -67,11 +74,6 @@
       }
     }];
     [dataTask resume];
-}
-
-
-- (IBAction)fetchPokedex:(id)sender {
-    [self makeAPICall];
 }
 
 @end

@@ -102,6 +102,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Pokedex"/>
                                 <connections>
                                     <action selector="fetchPokedex:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VaW-39-HIU"/>
+                                    <segue destination="zio-Ux-pTn" kind="show" id="15a-2a-kpb"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4fJ-1i-8Dv">
@@ -136,8 +137,60 @@
             </objects>
             <point key="canvasLocation" x="5.7971014492753632" y="79.6875"/>
         </scene>
+        <!--Pokemon View Controller-->
+        <scene sceneID="WRa-Nn-TBC">
+            <objects>
+                <viewController id="zio-Ux-pTn" customClass="PokemonViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Xi-Hn-AKq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bulbasaur" translatesAutoresizingMaskIntoConstraints="NO" id="6w1-Uj-93Q">
+                                <rect key="frame" x="87" y="94" width="240" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="SGi-CH-d3U"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QV0-Wv-XXj">
+                                <rect key="frame" x="20" y="282" width="76.5" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bulbasaur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ff-NJ-XZc">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCD-nW-y5R">
+                                        <rect key="frame" x="0.0" y="35.5" width="76.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HPJ-Ed-UXU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HPJ-Ed-UXU" firstAttribute="trailing" secondItem="6w1-Uj-93Q" secondAttribute="trailing" constant="87" id="1F4-oD-bDQ"/>
+                            <constraint firstItem="6w1-Uj-93Q" firstAttribute="leading" secondItem="HPJ-Ed-UXU" secondAttribute="leading" constant="87" id="1u3-tF-ptA"/>
+                            <constraint firstItem="6w1-Uj-93Q" firstAttribute="centerX" secondItem="HPJ-Ed-UXU" secondAttribute="centerX" id="EDr-RA-F0r"/>
+                            <constraint firstItem="QV0-Wv-XXj" firstAttribute="leading" secondItem="HPJ-Ed-UXU" secondAttribute="leading" constant="20" id="Wou-ht-Fcs"/>
+                            <constraint firstItem="QV0-Wv-XXj" firstAttribute="top" secondItem="6w1-Uj-93Q" secondAttribute="bottom" constant="10" id="WvE-Ba-6AO"/>
+                            <constraint firstItem="6w1-Uj-93Q" firstAttribute="top" secondItem="HPJ-Ed-UXU" secondAttribute="top" constant="50" id="epG-NC-3t1"/>
+                            <constraint firstItem="HPJ-Ed-UXU" firstAttribute="bottom" secondItem="QV0-Wv-XXj" secondAttribute="bottom" constant="504" id="rpo-l4-aOr"/>
+                            <constraint firstItem="HPJ-Ed-UXU" firstAttribute="trailing" secondItem="QV0-Wv-XXj" secondAttribute="trailing" constant="317.5" id="vsw-22-xes"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qTM-dq-Q8I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEm-FO-DU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766.66666666666674" y="79.6875"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Bulbasaur" width="430" height="390"/>
         <image name="power" catalog="system" width="128" height="124"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
